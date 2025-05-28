@@ -1,0 +1,47 @@
+---
+import { Picture } from "astro:assets";
+---
+
+<section class="hero-section min-h-screen bg-[#AED7E8]">
+    <div class="pt-10 max-w-6xl mx-auto">
+        <div class="space-y-4">
+            <h2
+                id="publications"
+                class="text-black font-black text-4xl leading-none tracking-tight"
+            >
+                Publications
+            </h2>
+            <div class="flex justify-center gap-4 mt-10">
+                <div class="card card-border bg-base-100 max-w-150 w-1/2">
+                    <div class="card-body">
+                        <h2 class="card-title">My awesome article</h2>
+                        <Picture
+                            src="https://media.istockphoto.com/id/474852858/fr/photo/journal-avec-le-titre-de-la-recherche-et-du-d%C3%A9veloppement.jpg?s=612x612&w=0&k=20&c=uQQ_p4zjZI9Y01m6OigULM7AoYhhGNOiKryTpjUZxlg="
+                            alt="My awesome article"
+                            width={600}
+                            height={600}
+                        />
+                        <div class="card-actions justify-center">
+                            <button class="btn btn-primary btn-sm">READ</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card-border bg-base-100 max-w-150 w-1/2">
+                    <div class="card-body">
+                        <h2 class="card-title">My second awesome article</h2>
+                        <Picture
+                            src="https://t3.ftcdn.net/jpg/02/32/63/18/360_F_232631862_QCTh5WKEaSqSab74eg8cgh17FduE8r8P.jpg"
+                            alt="My awesome article"
+                            width={600}
+                            height={600}
+                        />
+                        <div class="card-actions justify-center">
+                            <button class="btn btn-primary btn-sm">READ</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <slot /> -->
+</section>

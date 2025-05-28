@@ -1,0 +1,59 @@
+---
+import navData from "../data/navData";
+---
+
+<nav
+    class="fixed top-0 left-0 right-0 z-50 bg-base-100 xborder-b xborder-base-300 shadow-xl transition-colors duration-100"
+>
+    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-end md:justify-between items-center h-16">
+            <div class="hidden md:flex space-x-1 md:space-x-8 mx-auto">
+                {
+                    navData.map((item) => (
+                        <a
+                            href={`${item.path}`}
+                            class="text-neutral/80 hover:text-neutral text-sm font-medium hover:underline hover:decoration-2 hover:underline-offset-2"
+                        >
+                            {item.name}
+                        </a>
+                    ))
+                }
+            </div>
+            <div class="flex md:hidden space-x-1 lg:space-x-8">
+                <div class="dropdown">
+                    <div
+                        tabindex="0"
+                        role="button"
+                        class="btn btn-ghost btn-circle"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-5 w-5"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h7"></path>
+                        </svg>
+                    </div>
+                    <ul
+                        tabindex="0"
+                        class="menu menu-lg dropdown-content bg-base-100 rounded-box z-1 mt-3 w-65 p-2 shadow right-0"
+                    >
+                        {
+                            navData.map((item) => (
+                                <li>
+                                    <a href={`${item.path}`}>{item.name}</a>
+                                </li>
+                            ))
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

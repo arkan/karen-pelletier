@@ -1,0 +1,40 @@
+---
+import Seo from "./Seo.astro";
+import { ClientRouter } from "astro:transitions";
+import siteData from "../data/siteData.json";
+
+const { title, description, image, frontmatter, robots } = Astro.props;
+const { author, authorEmail, authorLinkedin } = siteData;
+---
+
+<head>
+    <title>{title}</title>
+    <ClientRouter />
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link
+        rel="alternate"
+        type="application/rss+xml"
+        title={author}
+        href={new URL("rss.xml", Astro.site)}
+    />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <Seo {title} {description} url={Astro.url} {image} {frontmatter} {robots} />
+
+    <meta name="author" content={author} />
+    <link href={authorEmail} rel="me" />
+    <link href={authorLinkedin} rel="me" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    />
+</head>

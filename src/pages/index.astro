@@ -1,0 +1,65 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SectionIntro from "../sections/intro.astro";
+import SectionAbout from "../sections/about.astro";
+import SectionPublications from "../sections/publications.astro";
+import SectionWorkInProgress from "../sections/work-in-progress.astro";
+import SectionResearchInterests from "../sections/research-interests.astro";
+import SectionTeaching from "../sections/teaching.astro";
+---
+
+<Layout title="Karen Pelletier" description="Media Culture Researcher">
+    <SectionIntro />
+    <SectionAbout />
+    <SectionPublications />
+    <SectionWorkInProgress />
+    <SectionResearchInterests />
+    <SectionTeaching />
+</Layout>
+
+<script>
+    document.addEventListener("scroll", () => {
+        const sections = document.querySelectorAll("section");
+        const navbar = document.querySelector("nav");
+        let found = false;
+
+        sections.forEach((section) => {
+            const rect = section.getBoundingClientRect();
+
+            // When section top edge moves above viewport
+            console.log(rect.toJSON());
+            if (rect.top <= navbar.offsetHeight) {
+                const currentColor = Array.from(section.classList).find(
+                    (className) => className.startsWith("bg-"),
+                );
+
+                if (navbar) {
+                    navbar.classList.remove(
+                        ...Array.from(navbar.classList).filter((c) =>
+                            c.startsWith("bg-"),
+                        ),
+                    );
+                    if (section === sections[0]) {
+                        navbar.classList.add("bg-base-100");
+                    } else {
+                        navbar.classList.add(currentColor || "bg-base-100");
+                    }
+                }
+            }
+            found = true;
+        });
+        // if (!found) {
+        //     if (navbar) {
+        //         navbar.classList.remove(
+        //             ...Array.from(navbar.classList).filter((c) =>
+        //                 c.startsWith("bg-"),
+        //             ),
+        //         );
+        //         // const currentColor = Array.from(sections[0].classList).find(
+        //         //     (className) => className.startsWith("bg-"),
+        //         // );
+        //         navbar.classList.add("bg-base-100");
+        //     }
+        // }
+    });
+</script>
