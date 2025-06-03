@@ -11,13 +11,13 @@ export interface Props {
     description?: string;
 }
 
-const { title, description = "Engineering Leader & Mentor" } = Astro.props;
+const { title, description = "Media Culture Researcher" } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
     <Head {title} {description} />
-    <body class="bg-[#C3DED0] text-slate-900 min-h-screen flex flex-col">
+    <body class="bg-light-beige text-slate-900 min-h-screen flex flex-col">
         <Navbar />
         <!-- Main Content -->
         <main id="home" class="flex-1 mx-auto px-0 w-full pt-16 pb-0">

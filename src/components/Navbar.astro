@@ -3,7 +3,7 @@ import navData from "../data/navData";
 ---
 
 <nav
-    class="fixed top-0 left-0 right-0 z-50 bg-base-100 xborder-b xborder-base-300 shadow-xl transition-colors duration-100"
+    class="fixed top-0 left-0 right-0 z-50 bg-light-beige xborder-b xborder-base-300 xshadow-xl transition-colors duration-100"
 >
     <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-end md:justify-between items-center h-16">
@@ -12,7 +12,7 @@ import navData from "../data/navData";
                     navData.map((item) => (
                         <a
                             href={`${item.path}`}
-                            class="text-neutral/80 hover:text-neutral text-sm font-medium hover:underline hover:decoration-2 hover:underline-offset-2"
+                            class="font-proxima-nova text-gray decoration-gray hover:text-neutral text-sm font-medium hover:underline hover:decoration-2 hover:underline-offset-2"
                         >
                             {item.name}
                         </a>
@@ -47,7 +47,12 @@ import navData from "../data/navData";
                         {
                             navData.map((item) => (
                                 <li>
-                                    <a href={`${item.path}`}>{item.name}</a>
+                                    <a
+                                        class="font-proxima-nova text-gray"
+                                        href={`${item.path}`}
+                                    >
+                                        {item.name}
+                                    </a>
                                 </li>
                             ))
                         }

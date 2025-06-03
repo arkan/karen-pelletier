@@ -1,17 +1,25 @@
-<section class="hero-section bg-[#C3DDD0]">
-    <div class="pt-16 max-w-6xl mx-auto">
+---
+import siteData from "../data/siteData.json";
+const { author, description } = siteData;
+---
+
+<section
+    class="hero-section bg-[#F8F4F0] relative bg-[url('/wave.svg')] bg-no-repeat bg-bottom"
+>
+    <div class="pt-16 max-w-6xl mx-auto z-20">
         <div class="space-y-4">
             <h1
-                class="text-black font-black text-7xl xl:text-8xl leading-none tracking-tight"
+                class="text-gray font-ivymode font-black text-8xl leading-none tracking-tight"
             >
-                Karen Pelletier
+                {author}
             </h1>
             <h2
-                class="text-black font-black text-5xl xl:text-6xl leading-tight tracking-tight"
+                class="text-light-orange font-ivymode text-5xl lg:text-6xl leading-tight tracking-tight"
             >
-                Media Culture<br />
-                Researcher
+                Social Media &<br />Communication Researcher
             </h2>
         </div>
     </div>
+    <!-- <div class="absolute bottom-0 left-0 w-full z-1">
+    </div> -->
 </section>

@@ -1,3 +1,4 @@
+/* @import url("https://use.typekit.net/kla4yiy.css"); */
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
@@ -5,13 +6,88 @@
     themes: lofi --default;
 }
 
+@font-face {
+    font-family: "lindsey-signature";
+    src: url("https://use.typekit.net/af/4ae17c/00000000000000007735fbe6/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"), url("https://use.typekit.net/af/4ae17c/00000000000000007735fbe6/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"), url("https://use.typekit.net/af/4ae17c/00000000000000007735fbe6/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+    font-display: auto;
+    font-style: normal;
+    font-weight: 400;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: "proxima-nova";
+    src: url("https://use.typekit.net/af/4b22bb/00000000000000007735e601/31/l?subset_id=2&fvd=n1&v=3") format("woff2"), url("https://use.typekit.net/af/4b22bb/00000000000000007735e601/31/d?subset_id=2&fvd=n1&v=3") format("woff"), url("https://use.typekit.net/af/4b22bb/00000000000000007735e601/31/a?subset_id=2&fvd=n1&v=3") format("opentype");
+    font-display: auto;
+    font-style: normal;
+    font-weight: 100;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: "ivymode";
+    src: url("https://use.typekit.net/af/d15877/00000000000000007735ce78/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff2"), url("https://use.typekit.net/af/d15877/00000000000000007735ce78/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff"), url("https://use.typekit.net/af/d15877/00000000000000007735ce78/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("opentype");
+    font-display: auto;
+    font-style: normal;
+    font-weight: 300;
+    font-stretch: normal;
+}
+
+@theme {
+    --font-proxima-nova: "proxima-nova", sans-serif;
+    --font-lindsey-signature: "lindsey-signature", serif;
+    --font-ivymode: "ivymode", sans-serif;
+    --color-gray: #6D5649;
+    --color-dark-green: #70673D;
+    --color-light-beige: #F9F4F0;
+    --color-abricot-beige: #F4E4D8;
+    --color-light-orange: #E5B693;
+}
+
 body {
     font-family: "Inter", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "ivymode", sans-serif;
+    @apply text-gray;
+}
+
+.card .card-body p {
+    @apply text-gray;
+    @apply font-proxima-nova;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    @apply text-justify;
+}
+
+.prose {
+    @apply text-gray;
+    @apply font-proxima-nova;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    @apply text-justify;
+    max-width: 90ch;
 }
 
 section {
     min-height: calc(100vh - 100px);
     @apply w-full px-4 py-4;
+    @apply overflow-x-hidden;
+    @apply pb-20;
+}
+
+.card-actions {
+    @apply mt-4;
 }
 
 /* Smooth scrolling */
@@ -35,4 +111,14 @@ html {
 
 ::-webkit-scrollbar-thumb:hover {
     background: #94a3b8;
+}
+
+.btn-gray {
+    @apply text-[#FEFFFF] cursor-pointer bg-[#70673D] hover:bg-[#533F32] focus:ring-4 font-medium text-sm px-5 py-2.5 focus:outline-none;
+    @apply w-fit;
+}
+
+.my-bg {
+    background: url("https://images.squarespace-cdn.com/content/v1/6338ec68d119b45af0b87b8e/68990e72-e310-497e-8aa8-c3485b287704/Intuitive+eating+dietition+Re_Nourished-020.png?format=1000w") no-repeat center center;
+    background-size: cover;
 }

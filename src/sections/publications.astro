@@ -2,41 +2,107 @@
 import { Picture } from "astro:assets";
 ---
 
-<section class="hero-section min-h-screen bg-[#AED7E8]">
+<section class="hero-section min-h-screen bg-light-beige">
     <div class="pt-10 max-w-6xl mx-auto">
         <div class="space-y-4">
             <h2
                 id="publications"
-                class="text-black font-black text-4xl leading-none tracking-tight"
+                class="text-gray font-ivymode text-4xl leading-none tracking-tight"
             >
                 Publications
             </h2>
-            <div class="flex justify-center gap-4 mt-10">
-                <div class="card card-border bg-base-100 max-w-150 w-1/2">
-                    <div class="card-body">
-                        <h2 class="card-title">My awesome article</h2>
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 justify-center gap-4 mt-10"
+            >
+                <div class="card card-border bg-[#FEFFFF] shadow-lg">
+                    <figure>
                         <Picture
                             src="https://media.istockphoto.com/id/474852858/fr/photo/journal-avec-le-titre-de-la-recherche-et-du-d%C3%A9veloppement.jpg?s=612x612&w=0&k=20&c=uQQ_p4zjZI9Y01m6OigULM7AoYhhGNOiKryTpjUZxlg="
-                            alt="My awesome article"
+                            alt="Cancer types: their social media coverage, incidence and distortion in French-speaking countries of the West"
                             width={600}
                             height={600}
                         />
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="card-title uppercase">
+                            Cancer types: their social media coverage, incidence
+                            and distortion in French-speaking countries of the
+                            West
+                        </h2>
+                        <p>
+                            This article investigates the coverage of different
+                            types of cancer on two major social networks sites,
+                            Facebook and Instagram. A categorical content
+                            analysis is performed on a corpus of 2,446 posts
+                            collected via a web listening tool on these two
+                            social media. The primary objective is to assess the
+                            coverage of different types of cancer on these
+                            social media. The second objective is to detect any
+                            distortions between this social media coverage and
+                            the number of new patients (incidence rate) in
+                            French-speaking countries of the West in 2020. Our
+                            results highlight the predominance of breast cancer
+                            coverage (18.3%), pediatric cancer (9.7%), leukemia
+                            (4.2%), but also the over-representation of female
+                            cancers accompanied by an under-representation of
+                            male cancers and urological cancers. Insofar as the
+                            efforts of groups defending certain diseases create
+                            a considerable impact on social media— and
+                            subsequently on the public agenda — it is of
+                            paramount importance to draw the attention of
+                            policymakers, scientists, and organizations on these
+                            representation gaps (distortions), by further
+                            engaging, for instance, communities around less
+                            visible cancers.
+                        </p>
                         <div class="card-actions justify-center">
-                            <button class="btn btn-primary btn-sm">READ</button>
+                            <a
+                                href="/documents/HNMR_vol5_no2_03.pdf"
+                                target="_blank"
+                                class="btn-gray">Download</a
+                            >
+                            <a
+                                href="https://www."
+                                target="_blank"
+                                class="btn-gray">View</a
+                            >
                         </div>
                     </div>
                 </div>
-                <div class="card card-border bg-base-100 max-w-150 w-1/2">
-                    <div class="card-body">
-                        <h2 class="card-title">My second awesome article</h2>
+                <div class="card card-border bg-[#FEFFFF] shadow-lg">
+                    <figure>
                         <Picture
                             src="https://t3.ftcdn.net/jpg/02/32/63/18/360_F_232631862_QCTh5WKEaSqSab74eg8cgh17FduE8r8P.jpg"
                             alt="My awesome article"
                             width={600}
                             height={600}
                         />
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="card-title uppercase">
+                            My second awesome article
+                        </h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Quisquam, quos. Lorem ipsum dolor sit amet
+                            consectetur adipisicing elit. Quisquam, quos. Lorem
+                            ipsum dolor sit amet consectetur adipisicing elit.
+                            Quisquam, quos. Lorem ipsum dolor sit amet
+                            consectetur adipisicing elit. Quisquam, quos. Lorem
+                            ipsum dolor sit amet consectetur adipisicing elit.
+                            Quisquam, quos.
+                        </p>
                         <div class="card-actions justify-center">
-                            <button class="btn btn-primary btn-sm">READ</button>
+                            <a
+                                href="/publications/my-second-awesome-article.pdf"
+                                target="_blank"
+                                class="btn-gray">Download</a
+                            >
+                            <a
+                                href="https://www."
+                                target="_blank"
+                                class="btn-gray">View</a
+                            >
                         </div>
                     </div>
                 </div>
