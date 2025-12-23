@@ -4,22 +4,32 @@ const { author, description } = siteData;
 ---
 
 <section
-    class="hero-section bg-[#F8F4F0] relative bg-[url('/wave.svg')] bg-no-repeat bg-bottom"
+    class="hero-section bg-[#F8F4F0] relative bg-[url('/wave.svg')] bg-no-repeat bg-bottom overflow-hidden"
 >
-    <div class="pt-16 max-w-6xl mx-auto z-20">
+    <!-- Decorative floating elements -->
+    <div class="absolute top-20 right-10 w-20 h-20 bg-light-orange/20 rounded-full floating-slow blur-xl"></div>
+    <div class="absolute bottom-40 left-20 w-32 h-32 bg-abricot-beige/30 rounded-full floating blur-2xl"></div>
+
+    <div class="pt-16 max-w-6xl mx-auto z-20 relative">
         <div class="space-y-4">
             <h1
-                class="text-gray font-ivymode font-black text-8xl leading-none tracking-tight"
+                class="hero-title text-gray font-ivymode font-black text-6xl md:text-8xl leading-none tracking-tight"
             >
                 {author}
             </h1>
             <h2
-                class="text-light-orange font-ivymode text-5xl lg:text-6xl leading-tight tracking-tight"
+                class="hero-subtitle text-light-orange font-ivymode text-4xl md:text-5xl lg:text-6xl leading-tight tracking-tight"
             >
                 Social Media &<br />Communication Researcher
             </h2>
+            <div class="hero-subtitle pt-6">
+                <a href="#about" class="btn-gray inline-flex items-center gap-2 group">
+                    Discover my work
+                    <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                </a>
+            </div>
         </div>
     </div>
-    <!-- <div class="absolute bottom-0 left-0 w-full z-1">
-    </div> -->
 </section>

@@ -11,7 +11,11 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
   site: "https://karenpelletier.ch",
-
+  image: {
+    service: {
+      entrypoint: 'astro/assets/services/noop'
+    }
+  },
   integrations: [sitemap({
     filenameBase: "sitemap"
   })],
