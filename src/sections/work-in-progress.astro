@@ -2,28 +2,31 @@
 import { Picture } from "astro:assets";
 ---
 
-<section class="hero-section min-h-screen bg-abricot-beige">
+<section class="hero-section min-h-screen bg-abricot-beige overflow-hidden">
     <div class="pt-10 max-w-6xl mx-auto">
         <div class="space-y-4">
             <h2
                 id="work-in-progress"
-                class="text-black font-black text-4xl leading-none tracking-tight"
+                class="section-title animate-on-scroll text-gray font-ivymode text-4xl leading-none tracking-tight"
             >
                 Work in Progress
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
-                <div class="card card-dash bg-base-100">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+                <div class="card card-dash bg-base-100 animate-scale stagger-1 overflow-hidden">
                     <div class="card-body">
                         <h2 class="card-title">
                             Lorem ipsum dolor sit amet, consectetur adipiscing
                             elit sed do eiusmod tempor
                         </h2>
-                        <Picture
-                            src="https://picsum.photos/seed/picsum/600/600"
-                            alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor"
-                            width={600}
-                            height={600}
-                        />
+                        <div class="overflow-hidden rounded-lg">
+                            <Picture
+                                src="https://picsum.photos/seed/picsum/600/600"
+                                alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor"
+                                width={600}
+                                height={600}
+                                class="transition-transform duration-500"
+                            />
+                        </div>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing
                             elit. Sed do eiusmod tempor incididunt ut labore et
@@ -31,48 +34,54 @@ import { Picture } from "astro:assets";
                             nostrud exercitation ullamco laboris nisi ut aliquip
                             ex ea commodo consequat.
                         </p>
-                        <p>co-author: @someone</p>
+                        <p class="text-sm text-gray/70 italic">co-author: @someone</p>
                         <div class="card-actions justify-center">
                             <button class="btn-gray">Read</button>
                         </div>
                     </div>
                 </div>
-                <div class="card card-dash bg-base-100">
+                <div class="card card-dash bg-base-100 animate-scale stagger-2 overflow-hidden">
                     <div class="card-body">
                         <h2 class="card-title">
                             Lorem ipsum dolor sit amet, consectetur adipiscing
                             elit sed do eiusmod tempor incididunt ut labore
                         </h2>
-                        <Picture
-                            src="https://picsum.photos/seed/picsum42/600/600"
-                            alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore"
-                            width={600}
-                            height={600}
-                        />
+                        <div class="overflow-hidden rounded-lg">
+                            <Picture
+                                src="https://picsum.photos/seed/picsum42/600/600"
+                                alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore"
+                                width={600}
+                                height={600}
+                                class="transition-transform duration-500"
+                            />
+                        </div>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing
                             elit. Sed do eiusmod tempor incididunt ut labore et
                             dolore magna aliqua. Ut enim ad minim veniam, quis
                             nostrud exercitation ullamco laboris.
                         </p>
-                        <p>co-author: @someone</p>
+                        <p class="text-sm text-gray/70 italic">co-author: @someone</p>
                         <div class="card-actions justify-center">
                             <button class="btn-gray">Read</button>
                         </div>
                     </div>
                 </div>
-                <div class="card card-dash bg-base-100">
+                <div class="card card-dash bg-base-100 animate-scale stagger-3 overflow-hidden">
                     <div class="card-body">
                         <h2 class="card-title">
                             Lorem ipsum dolor sit amet, consectetur adipiscing
                             elit sed do eiusmod tempor incididunt ut labore
                         </h2>
-                        <Picture
-                            src="https://picsum.photos/seed/picsum44/600/600"
-                            alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore"
-                            width={600}
-                            height={600}
-                        />
+                        <div class="overflow-hidden rounded-lg">
+                            <Picture
+                                src="https://picsum.photos/seed/picsum44/600/600"
+                                alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore"
+                                width={600}
+                                height={600}
+                                class="transition-transform duration-500"
+                            />
+                        </div>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing
                             elit. Sed do eiusmod tempor incididunt ut labore et
@@ -80,7 +89,7 @@ import { Picture } from "astro:assets";
                             nostrud exercitation ullamco laboris nisi ut aliquip
                             ex ea commodo consequat.
                         </p>
-                        <p>co-author: @someone</p>
+                        <p class="text-sm text-gray/70 italic">co-author: @someone</p>
                         <div class="card-actions justify-center">
                             <button class="btn-gray">Read</button>
                         </div>
@@ -89,5 +98,4 @@ import { Picture } from "astro:assets";
             </div>
         </div>
     </div>
-    <!-- <slot /> -->
 </section>

@@ -2,25 +2,26 @@
 import { Picture } from "astro:assets";
 ---
 
-<section class="hero-section min-h-screen bg-light-beige">
+<section class="hero-section min-h-screen bg-light-beige overflow-hidden">
     <div class="pt-10 max-w-6xl mx-auto">
         <div class="space-y-4">
             <h2
                 id="publications"
-                class="text-gray font-ivymode text-4xl leading-none tracking-tight"
+                class="section-title animate-on-scroll text-gray font-ivymode text-4xl leading-none tracking-tight"
             >
                 Publications
             </h2>
             <div
-                class="grid grid-cols-1 md:grid-cols-2 justify-center gap-4 mt-10"
+                class="grid grid-cols-1 md:grid-cols-2 justify-center gap-6 mt-10"
             >
-                <div class="card card-border bg-[#FEFFFF] shadow-lg">
-                    <figure>
+                <div class="card card-border bg-[#FEFFFF] shadow-lg animate-scale stagger-1 overflow-hidden">
+                    <figure class="overflow-hidden">
                         <Picture
                             src="https://media.istockphoto.com/id/474852858/fr/photo/journal-avec-le-titre-de-la-recherche-et-du-d%C3%A9veloppement.jpg?s=612x612&w=0&k=20&c=uQQ_p4zjZI9Y01m6OigULM7AoYhhGNOiKryTpjUZxlg="
                             alt="Cancer types: their social media coverage, incidence and distortion in French-speaking countries of the West"
                             width={600}
                             height={600}
+                            class="transition-transform duration-500"
                         />
                     </figure>
                     <div class="card-body">
@@ -69,13 +70,14 @@ import { Picture } from "astro:assets";
                         </div>
                     </div>
                 </div>
-                <div class="card card-border bg-[#FEFFFF] shadow-lg">
-                    <figure>
+                <div class="card card-border bg-[#FEFFFF] shadow-lg animate-scale stagger-2 overflow-hidden">
+                    <figure class="overflow-hidden">
                         <Picture
                             src="https://t3.ftcdn.net/jpg/02/32/63/18/360_F_232631862_QCTh5WKEaSqSab74eg8cgh17FduE8r8P.jpg"
                             alt="My awesome article"
                             width={600}
                             height={600}
+                            class="transition-transform duration-500"
                         />
                     </figure>
                     <div class="card-body">
@@ -109,5 +111,4 @@ import { Picture } from "astro:assets";
             </div>
         </div>
     </div>
-    <!-- <slot /> -->
 </section>

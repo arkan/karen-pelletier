@@ -1,36 +1,38 @@
-<section class="hero-section min-h-screen bg-[#F4E4D8]">
+<section class="hero-section min-h-screen bg-[#F4E4D8] overflow-hidden">
     <div class="pt-10 max-w-6xl mx-auto">
         <div class="space-y-4">
             <h2
                 id="about"
-                class="text-gray font-ivymode text-4xl leading-none tracking-tight"
+                class="section-title animate-on-scroll text-gray font-ivymode text-4xl leading-none tracking-tight"
             >
                 ABOUT
             </h2>
-            <div class="flex flex-col md:flex-row gap-4">
-                <div class="min-w-50">
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="min-w-50 animate-fade-left">
                     <h3
                         class="text-gray font-black text-xl leading-none tracking-tight mt-6 mb-6"
                     >
-                        Let’s Chat!
+                        Let's Chat!
                     </h3>
-                    <ul class="mb-6">
+                    <ul class="mb-6 space-y-2">
                         <li>
                             <a
-                                class="link link-hover text-gray"
+                                class="link link-hover text-gray inline-flex items-center gap-2 group"
                                 href="https://www.linkedin.com/in/karen-pelletier-gen%C3%A8ve/"
-                                >→ Linkedin</a
                             >
+                                <span class="transition-transform group-hover:translate-x-1">→</span> Linkedin
+                            </a>
                         </li>
                         <li>
                             <a
-                                class="link link-hover text-gray"
+                                class="link link-hover text-gray inline-flex items-center gap-2 group"
                                 href="mailto:karen.pelletier@unige.ch"
-                                >→ Email</a
                             >
+                                <span class="transition-transform group-hover:translate-x-1">→</span> Email
+                            </a>
                         </li>
                     </ul>
-                    <div class="flex flex-col gap-1">
+                    <div class="flex flex-col gap-3">
                         <a
                             href="/CV Karen Pelletier_EN.pdf"
                             target="_blank"
@@ -43,7 +45,7 @@
                         >
                     </div>
                 </div>
-                <div class="w-full">
+                <div class="w-full animate-on-scroll stagger-2">
                     <div class="prose text-gray my-bg">
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -74,17 +76,19 @@
                             reprehenderit in voluptate velit esse cillum dolore
                             eu fugiat nulla pariatur.
                         </p>
-                        <p>Please journey through my world as you scroll</p>
+                        <p class="italic">Please journey through my world as you scroll</p>
                     </div>
                 </div>
-                <div class="w-full md:w-50">
-                    <img
-                        src="https://www.das-geneve.com/wp-content/uploads/2018/04/Karen-Pelletier-Gene%CC%80ve-222x300.jpg"
-                        class="w-full max-w-50 rounded-lg shadow-lg mx-auto mt-10 md:mt-0"
-                    />
+                <div class="w-full md:w-50 animate-fade-right stagger-3">
+                    <div class="img-hover">
+                        <img
+                            src="https://www.das-geneve.com/wp-content/uploads/2018/04/Karen-Pelletier-Gene%CC%80ve-222x300.jpg"
+                            class="w-full max-w-50 rounded-lg shadow-lg mx-auto mt-10 md:mt-0"
+                            alt="Karen Pelletier"
+                        />
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- <slot /> -->
 </section>
